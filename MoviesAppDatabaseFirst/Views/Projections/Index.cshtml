@@ -1,0 +1,65 @@
+﻿@model IEnumerable<MoviesAppDatabaseFirst.Models.Projection>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 style="color:darkslategrey">Projections</h2>
+
+<p>
+    @Html.ActionLink("Create New Projection", "Create", null, new { @class = "btn btn-default" })
+
+</p>
+<table class="table" style="background-color:white">
+    <tr style="color:white; background-color:darkslategray">
+        <th>
+
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Movy.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hall.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AvailableSits)
+        </th>
+
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            <img src=@item.Movy.imgUrl style="margin:5px; width:150px; height:150px" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Movy.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hall.Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AvailableSits)
+        </td>
+
+
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-default" })
+            @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn btn-default" })
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-default" })
+        </td>
+    </tr>
+    }
+
+</table>
+@Html.ActionLink("Back to Movies", "Index", "Movies", new { @class = "btn btn-primary" })
+

@@ -1,0 +1,58 @@
+﻿@model MoviesAppDatabaseFirst.Models.Ticket
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ticket</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.numOfPeople)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numOfPeople)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ticketType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ticketType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Client.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Projection.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Projection.Id)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,58 @@
+﻿@model MoviesAppDatabaseFirst.Models.Review
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Review</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.raiting)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.raiting)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.comment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.comment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Client.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Movy.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Movy.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
